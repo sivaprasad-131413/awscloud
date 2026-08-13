@@ -1,5 +1,14 @@
+
+## AWS Provider Configuration multiple regions
+
 provider "aws" {
-  region = "ap-south-1"
+    alias = "ap-south-1a"
+  region = "ap-south-1a"
+}
+
+provider "aws" {
+    alias = "ap-south-1b"
+  region = "ap-south-1b"
 }
 
 resource "aws_instance" "siva_instance" {
